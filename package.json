@@ -1,0 +1,15 @@
+{
+  "name": "binancejs",
+  "version": "1.0.0",
+  "description": "BinanceJS is an advanced API wrapper for the Binance Futures and Spot APIs.",
+  "main": "index.js",
+  "types": "./typings/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RigidStudios",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^15.9.0"
+  }
+}
