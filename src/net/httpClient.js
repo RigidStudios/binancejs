@@ -1,6 +1,6 @@
-let http = require('https');
-let axios = require('axios').default;
-let privateStorage = require('../../../private.json');
+const http = require('https');
+const axios = require('axios').default;
+const privateStorage = require('../../../private.json');
 
 axios.defaults.headers.post['X-MBX-APIKEY'] = privateStorage.APIKEY;
 
