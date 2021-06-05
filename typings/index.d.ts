@@ -1,6 +1,6 @@
 import { EventEmitter } from "events";
 
-declare module 'binancejs' {
+declare module 'binance-api-njs' {
     export class Packet {
         constructor(client: Client, data: string);
         public data: Object;
@@ -28,13 +28,14 @@ declare module 'binancejs' {
     }
 
     export class User extends Base {
-
+        constructor(Client: Client)
     }
 
     export class Client extends BaseSocketPacketProcessor {
         constructor(options: ClientOptions);
-        public subscribe(depth: string[], symbol: string, fn: VoidFunction): void;
-        public subscribe(depth: string, symbol: string, fn: VoidFunction): void;
+
+        public subscribe(depth: string[], symbol: string, fn: () => void): void;
+        public subscribe(depth: string, symbol: string, fn: () => void): void;
 
         public currencies: CurrencyManager;
         public user: User;
@@ -47,5 +48,6 @@ declare module 'binancejs' {
     export class Currency extends BaseSocketPacketProcessor {
         constructor(Client: Client);
     }
-}
 
+    export = Client;
+}
