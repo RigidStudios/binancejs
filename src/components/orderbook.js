@@ -1,8 +1,10 @@
 const EventEmitter = require("events");
 
 class Orderbook extends EventEmitter {
-    constructor(client, symbol) {
+    constructor(Client, symbol) {
         super();
+
+        this.client = Client;
 
         this.orderbook = {};
     }

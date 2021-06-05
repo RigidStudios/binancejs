@@ -1,11 +1,14 @@
 {
-  "name": "binancejs",
-  "version": "1.0.0",
+  "name": "binance-api-njs",
+  "version": "1.0.2c",
   "description": "BinanceJS is an advanced API wrapper for the Binance Futures and Spot APIs.",
   "main": "index.js",
   "types": "./typings/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    "require": "./index.js"
   },
   "author": "RigidStudios",
   "license": "ISC",
